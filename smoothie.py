@@ -12,9 +12,6 @@ def smoothie(ingredients: list[str], base: str = "water", ice: bool = True) -> s
     Returns:
         str: A description of the smoothie.
     """
-    if not isinstance(base, str):
-        raise TypeError("That is not an ingredient")
-
     base_str = base.strip().lower()
     if base_str == "":
         base_str = "water"
