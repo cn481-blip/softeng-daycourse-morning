@@ -9,7 +9,12 @@ def add(a, b):
 
 
 def is_even(n):
-    """Return True if n is even, False if odd, or None if not a number."""
+    """Return True if n is even, False if odd, str if a decimal, or None if not a number."""
+    try:
+        if n % 2 not in [0,1]:
+            return "your number is a decimal"
+    except Exception:
+        pass
     try:
         return n % 2 == 0
     except Exception:
